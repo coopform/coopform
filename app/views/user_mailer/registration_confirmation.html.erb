@@ -1,0 +1,3 @@
+Hello <%= @user.name %>,
+thank you for your registration. To activate your account click the lick below: <br/>
+<%= confirm_email_user_url(@user.confirm_token) %>

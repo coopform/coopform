@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l6 offset-l3 xl6 offset-xl3">
+            <div class="card" style="height: auto; width: 100%; padding: 25px; margin-top: 50px">
+                <%= form_tag sessions_path do |form| %>
+                    <div class="input-field">
+                        <%= label_tag(:email, "Email") %>
+                        <%= text_field_tag :email %>
+                    </div>
+                    <div class="input-field">
+                        <%= label_tag(:password, "Password") %>
+                        <%= password_field_tag :password %>
+                        <p class="alert header" style="color: red"><%= alert %></p>
+                    </div>
+                    <div class="row"> 
+                        <div class="col s12 m12 l4 offset-l8 xl4 offset-xl8">
+                            <%= submit_tag("Login", class: "link btn green accent-3", style: "width: 100%") %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+</div>

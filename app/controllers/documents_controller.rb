@@ -5,7 +5,7 @@ class DocumentsController < ApplicationController
             format.pdf do
                 render pdf: "test",
                 # page_size: 'A4',
-                :wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
+                # :wkhtmltopdf => '/usr/local/bin/wkhtmltopdf',
                 template: "documents/test.html.erb",
                 layout: "pdf.html"
                 # orientation: "Landscape",

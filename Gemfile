@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'dotenv-rails'
+# gem 'wkhtmltopdf'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

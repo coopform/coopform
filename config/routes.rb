@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: 'logout'
   get '/activated/:id', to: 'welcome#activated', as: 'activated'
   get '/activate', to: 'welcome#mail_info', as: 'mail_info'
+  get '/documents/g0', to: 'documents#generate', as: 'generate'
 end

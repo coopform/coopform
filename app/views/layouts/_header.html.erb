@@ -6,7 +6,8 @@
     </ul>
     <nav class="amber">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Logo</a>
+            <%= link_to image_tag("logo.png", style: "height: 60px; width: auto"), root_path, class: "brand-logo" %>
+            <%= link_to "Coop Form", root_path, class: "brand-logo", style: "margin-left: 70px" %>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><%= link_to "Home", root_path %></li>
                 <% if !logged_in? %>

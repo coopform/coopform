@@ -1,0 +1,14 @@
+<table>
+    <tbody>
+        <tr>
+            <td><input type="text" id="add-person-input"></td>
+            <td style="cursor: pointer" onclick="addPerson()"><%= material_icon.add %></td>
+        </tr>
+        <% @people.each do |p| %>
+            <tr>
+                <td><%= p.person %></td>
+                <td style="cursor: pointer; padding: 0px" onclick="removePerson('<%= p.person %>')"><%= material_icon.remove %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+<% case current_user.category_id %>
+    <% when 1 %>
+        <%= render 'form_one' %>
+    <% when 2 %>
+        <%= render 'form_two' %>
+    <% when 3 %>
+        <%= render 'form_three' %>
+<% end %>

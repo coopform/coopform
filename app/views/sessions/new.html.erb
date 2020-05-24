@@ -1,3 +1,4 @@
+<%= render 'msg' %>
 <div class="container">
     <div class="row">
         <div class="col s12 m12 l6 offset-l3 xl6 offset-xl3">
@@ -12,8 +13,11 @@
                         <%= password_field_tag :password %>
                         <p class="alert header" style="color: red"><%= alert %></p>
                     </div>
-                    <div class="row"> 
-                        <div class="col s12 m12 l4 offset-l8 xl4 offset-xl8">
+                    <div class="row">
+                        <div class="col s12 m12 l4 xl4">
+                            <%= link_to("Sign up", signup_path, class: "link btn amber", style: "width: 100%") %>
+                        </div>
+                        <div class="col s12 m12 l4 offset-l4 xl4 offset-xl4">
                             <%= submit_tag("Login", class: "link btn green accent-3", style: "width: 100%") %>
                         </div>
                     </div>

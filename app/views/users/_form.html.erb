@@ -31,7 +31,11 @@
             <% if user.errors.any? %>
                 <p class="alert header" style="color: red">Fill required fields!</p>
             <% end %>
-                <div class="col s12 m12 l3 offset-l9">
+            
+                <div class="col s12 m12 l4 xl4">
+                    <%= link_to("Login", login_path, class: "link btn amber", style: "width: 100%") %>
+                </div>
+                <div class="col s12 m12 l4 offset-l4 xl4 offset-xl4">
                     <%= form.submit("Confirm", class: "link btn green accent-3", style: "width: 100%") %>
                 </div>
         <% end %>

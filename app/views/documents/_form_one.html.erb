@@ -1,0 +1,88 @@
+<div class="container">
+    <h4 style="text-align: center"><%= @category.name %></h4>
+    <%= render 'msg' %>
+    <div class="card" style="padding: 30px">
+        <%= form_with(url: document_create_path("save"), method: 'get') do %>
+            <div class="row">
+                <div class="col s12">
+                    <%= label_tag :ans_1, "Coloque a denominação social e a sigla da cooperativa:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_1, @answears[1], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_2, "Informe o dia, mês e ano de fundação da constituição:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_2, @answears[2], style: "resize: none", class: "datepicker" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_3, "Informe o nome do município ou do distrito onde está localizada a cooperativa:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_3, @answears[3], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_4, "Informe o Estado:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_4, @answears[4], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_5, "Informe o endereço completo da sede da cooperativa:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_5, @answears[5], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_6, "Informe o nome da Comarca:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_6, @answears[6], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_3_1, "Informe o nome do município da área de admissão de cooperados:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_3_1, @answears[31], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_7, "Descreva os negócios externos da cooperativa (Objeto Social da Cooperativa):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_7, @answears[7], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_8, "Informe o capital da Cooperativa em números (R$ X.XXX,XX):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_8, @answears[8], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_8_1, "Informe o capital da Cooperativa escrito por extenso (xxxx xxxx xxxx reais):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_8_1, @answears[81], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_9, "Informe o valor de cada quota-parte em números (R$ XX,XX):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_9, @answears[9], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_9_1, "Informe o valor de cada quota-parte escrito por extenso (xxxx xxxx reais):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_9_1, @answears[91], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_10, "Informe o número mínimo de quotas-parte a ser subscrito por cada cooperado (em números – XX):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_10, @answears[10], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_10_1, "Informe o número mínimo de quotas-parte a ser subscrito por cada cooperado (em palavras – xxxx xxxx reais):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_10_1, @answears[101], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_11, "Informe a duração do mandato do Conselho de Administração – composto por 5 membros eleitos pela Assembleia Geral – em anos (máximo de 4 anos):", style: "margin-top: 30px" %>
+                    <%= select_tag :ans_11, options_for_select([["1 ano","1 ano"],["2 anos","2 anos"],["3 anos","3 anos"],["4 anos","4 anos"]],[@answears[11]]), style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_12, "Coloca o nome do Local – município, dia, mês e ano:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_12, @answears[12], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :people, "Insira o nome completo de todos os cooperados:" %>
+                    <div id="people-div"><%= render "people" %></div>
+                </div>
+                <div class="col s12 m12 l2 xl2">
+                    <%= link_to("Download", generate_path(:format => 'pdf'), class: "btn amber", style: "width: 100%; margin-top: 15px") %>
+                </div>
+                <div class="col s12 m12 l2 offset-l8 xl2 offset-xl8">
+                    <%= submit_tag("Save", class: "btn green accent-3", style: "width: 100%; margin-top: 15px") %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<%= form_with(url: document_create_path("persons"), method: 'get', remote: true, id: 'hidden-person-add-form') do %>
+    <%= hidden_field_tag :hidden_person %>
+    <%= hidden_field_tag :hidden_type %>
+<% end %>

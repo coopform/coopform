@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :message
+
     def new
         @user = User.new
     end
@@ -28,6 +30,10 @@ class UsersController < ApplicationController
 
     def user_params
         params.require(:user).permit(:email, :password, :password_confirmation, :name, :surname, :company)
+    end
+
+    def message
+        @msg = params[:message]
     end
 
 end

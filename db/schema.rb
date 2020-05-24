@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200523155051) do
+ActiveRecord::Schema.define(version: 20200524024735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answears", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "number"
+    t.string "value", limit: 1000
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", limit: 50
+    t.string "description", limit: 400
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "person", limit: 100
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -25,6 +47,7 @@ ActiveRecord::Schema.define(version: 20200523155051) do
     t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

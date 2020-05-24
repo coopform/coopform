@@ -1,14 +1,14 @@
-<h2><%= "ESTATUTO DA COOPERATIVA " + @answears[1] %></h2><br>
+<h2><%= "ESTATUTO DA COOPERATIVA " + @answears[1] if @answears[1] %></h2><br>
 <h3 style="text-align: center">CAPÍTULO I</h3>
 <h4 style="text-align: center">DA DENOMINAÇÃO, SEDE, FORO, PRAZO DE DURAÇÃO, ÁREA DE AÇÃO E ANO SOCIAL</h4><br>
-<p><b>Art. 1º. </b>A Cooperativa <%= @answears[1] %>, constituída no dia <%= @answears[2] %>, rege-se pelos valores e princípios do cooperativismo, pelas disposições legais, pelas diretrizes da autogestão e por este Estatuto, tendo:</p>
-<p><b>a)</b>&emsp;sede administrativa em <%= @answears[3] %>, Estado de <%= @answears[4] %>, na <%= @answears[5] %> foro jurídico na Comarca de <%= @answears[6] %>, Estado de <%= @answears[4] %>;</p>
-<p><b>b)</b>&emsp;área de admissão de cooperados, abrangendo o município de <%= @answears[31] %> e região, podendo atuar em todo o território nacional;</p>
+<p><b>Art. 1º. </b>A Cooperativa <%= @answears[1] if @answears[1] %>, constituída no dia <%= @answears[2] if @answears[2] %>, rege-se pelos valores e princípios do cooperativismo, pelas disposições legais, pelas diretrizes da autogestão e por este Estatuto, tendo:</p>
+<p><b>a)</b>&emsp;sede administrativa em <%= @answears[3] if @answears[3] %>, Estado de <%= @answears[4] if @answears[4] %>, na <%= @answears[5] if @answears[5] %> foro jurídico na Comarca de <%= @answears[6] if @answears[6] %>, Estado de <%= @answears[4] if @answears[4] %>;</p>
+<p><b>b)</b>&emsp;área de admissão de cooperados, abrangendo o município de <%= @answears[31] if @answears[31] %> e região, podendo atuar em todo o território nacional;</p>
 <p><b>c)</b>&emsp;prazo de duração indeterminado e ano social compreendido no período de 1° de janeiro a 31 de dezembro de cada ano.</p>
 <p><b>Parágrafo Único: A cooperativa somente poderá entrar em funcionamento após o registro na OCEMG, conforme determinação do art. 6º, inciso XI da Lei Estadual 15.075/04”;</b></p><br>
 <h3 style="text-align: center">CAPÍTULO II</h3>
 <h4 style="text-align: center">DO OBJETO SOCIAL</h4><br>
-<p><b>Art. 2º. </b>A Cooperativa, com base na colaboração recíproca a que se obrigam seus cooperados, tem por objeto social <%= @answears[7] %>.</p><br>
+<p><b>Art. 2º. </b>A Cooperativa, com base na colaboração recíproca a que se obrigam seus cooperados, tem por objeto social <%= @answears[7] if @answears[7] %>.</p><br>
 <h3 style="text-align: center">CAPÍTULO III</h3>
 <h4 style="text-align: center">DOS COOPERADOS</h4><br>
 <p><b>a) ADMISSÃO, DEVERES, DIREITOS E RESPONSABILIDADES</b></p><br>
@@ -70,13 +70,13 @@
 <p><b>Art. 17. </b>Os deveres de cooperados demitidos, eliminados ou excluídos perduram até a data da Assembléia Geral que aprovar o balanço de contas do exercício em que ocorreu o desligamento.</p><br>
 <h3 style="text-align: center">CAPÍTULO IV</h3>
 <h4 style="text-align: center">DO CAPITAL</h4><br>
-<p><b>Art. 18. </b>O capital da Cooperativa, representado por quotas-parte, não terá limite quanto ao máximo e variará conforme o número de quotas parte subscritas, mas não poderá ser inferior a R$ <%= @answears[8] %> (<%= @answears[81] %>).</p>
-<p><b>§ 1º. </b>O capital é subdividido em quotas parte no valor de R$ <%= @answears[9] %> (<%= @answears[91] %>) cada uma.</p>
+<p><b>Art. 18. </b>O capital da Cooperativa, representado por quotas-parte, não terá limite quanto ao máximo e variará conforme o número de quotas parte subscritas, mas não poderá ser inferior a R$ <%= @answears[8] if @answears[8] %> (<%= @answears[81] if @answears[81] %>).</p>
+<p><b>§ 1º. </b>O capital é subdividido em quotas parte no valor de R$ <%= @answears[9] if @answears[9] %> (<%= @answears[91] if @answears[91] %>) cada uma.</p>
 <p><b>§ 2º. </b>A quotas-parte é indivisível, intransferível a não cooperados, não podendo ser negociada de modo algum, nem dada em garantia, e sua subscrição, integralização, transferência ou restituição será sempre escriturada no Livro de Matrícula.</p>
 <p><b>§ 3º. </b>A transferência de quotas parte entre cooperados, total ou parcial, será escriturada no Livro de Matrícula mediante termo que contenha as assinaturas do cedente, do cessionário e do Presidente da Cooperativa.</p>
 <p><b>§ 4º. </b>O cooperado deve integralizar as quotas parte à vista ou caso o Conselho de Administração aprove, em parcelas periódicas, devendo o referido órgão de administração estabelecer o número e dia de vencimento para pagamento das parcelas.</p>
 <p><b>§ 5º. </b>Para efeito de integralização de quotas parte ou de aumento do capital social, a Cooperativa poderá receber bens, desde que avaliados previamente, e feita homologação da Assembléia Geral.</p>
-<p><b>Art. 19. </b>O número de quotas parte do capital social a ser subscrito pelo cooperado, por ocasião de sua admissão não poderá ser inferior a <%= @answears[10] %> (<%= @answears[101] %>) quotas parte ou superior a 1/3 (um terço) do total subscrito.</p><br>
+<p><b>Art. 19. </b>O número de quotas parte do capital social a ser subscrito pelo cooperado, por ocasião de sua admissão não poderá ser inferior a <%= @answears[10]if @answears[10] %> (<%= @answears[101] if @answears[101] %>) quotas parte ou superior a 1/3 (um terço) do total subscrito.</p><br>
 <h3 style="text-align: center">CAPÍTULO V</h3>
 <h4 style="text-align: center">DA ASSEMBLÉIA GERAL</h4><br>
 <p><b>a) DEFINIÇÃO E FUNCIONAMENTO</b></p><br>
@@ -327,7 +327,7 @@
 <h3 style="text-align: center">CAPÍTULO XI</h3>
 <h4 style="text-align: center">DAS DISPOSIÇÕES GERAIS E TRANSITÓRIAS</h4><br>
 <p><b>Art. 69. </b>Os casos omissos serão resolvidos pela Assembléia Geral desta Cooperativa de acordo com os princípios doutrinários e legais.</p><br>
-<p><%= @answears[12] %></p>
+<p><%= @answears[12] if @answears[12] %></p>
 
 <div style="width: 33%; display: inline-block; margin-top: 60px">
     <p style="text-align: center"><i>Assinatura do Cooperado</i></p>
@@ -345,5 +345,5 @@
     <div style="width: 33%; display: inline-block; border-top: 1px solid black; margin-top: 60px">
         <p style="text-align: center"><%= p.person %></p>
     </div>
-<% end %>
+<% end if @people %>
 

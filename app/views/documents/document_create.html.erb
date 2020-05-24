@@ -1,3 +1,4 @@
+<div class="container"><%= link_to "Change category", category_pick_path, class: "btn amber left" %></div>
 <% case current_user.category_id %>
     <% when 1 %>
         <%= render 'form_one' %>

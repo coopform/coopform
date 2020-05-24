@@ -1,0 +1,58 @@
+<div id="people-modal" class="modal" style="z-index: 999">
+    <div class="modal-content">
+        <i class="material-icons right" id="people-modal-close" onclick="$('#people-modal').hide('fade');" style="cursor: pointer">close</i>
+        <h5 id="people-modal-title" style="text-align: center">Adicionar pessoa</h5>
+        <div id="people-modal-content" style="min-height: 200px;">
+            <%= form_with(url: formula_add_person_path("create"), method: 'get', id: "add-person-form",remote: true) do %>
+                <div class="row">
+                    <div class="col s2">
+                        <div class="input-field">
+                            <%= select_tag :one, options_for_select([["Sr.","Sr."],["Sra.","Sra."]]) %>
+                        </div>
+                    </div>
+                    <div class="col s10">
+                        <div class="input-field">
+                            <%= label_tag :two, "Coloque o nome completo do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :two, "" %>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <%= label_tag :three, "Coloque o estado civil do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :three, "" %>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <%= label_tag :four, "Coloque a profissão do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :four, "" %>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <%= label_tag :five, "Coloque o CPF do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :five, "" %>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <%= label_tag :six, "Coloque a identidade do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :six, "" %>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="input-field">
+                            <%= label_tag :seven, "Coloque o endereço completo do(-a) 1. cooperador(-a) fundador(-a)." %>
+                            <%= text_field_tag :seven, "" %>
+                        </div>
+                    </div>
+                    <div class="col s2 offset-s10">
+                        <a class="btn green accent-3" onclick="submitPerson()">Adicionar pessoa</a>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>

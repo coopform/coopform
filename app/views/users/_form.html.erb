@@ -9,34 +9,34 @@
             </div>
 
             <div class="input-field">
-                <%= label :password, "Password", for: 'user_password' %>
+                <%= label :password, "Senha", for: 'user_password' %>
                 <%= form.password_field :password, id: :user_password %>
             </div>
 
             <div class="input-field">
-                <%= label :password_confirmation, "Repeat password", for: 'user_password_confirmation' %>
+                <%= label :password_confirmation, "Repita sua senha", for: 'user_password_confirmation' %>
                 <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
             </div>
 
             <div class="input-field">
-                <%= label :name, "Name", for: 'user_name' %>
+                <%= label :name, "Nome", for: 'user_name' %>
                 <%= form.text_field :name, id: :user_name %>
             </div>
 
             <div class="input-field">
-                <%= label :surname, "Surname", for: 'user_surname' %>
+                <%= label :surname, "Sobrenome", for: 'user_surname' %>
                 <%= form.text_field :surname, id: :user_surname %>
             </div>
 
             <% if user.errors.any? %>
-                <p class="alert header" style="color: red">Fill required fields!</p>
+                <p class="alert header" style="color: red">Preencha os campos requeridos!</p>
             <% end %>
             
                 <div class="col s12 m12 l4 xl4">
                     <%= link_to("Login", login_path, class: "link btn amber", style: "width: 100%") %>
                 </div>
                 <div class="col s12 m12 l4 offset-l4 xl4 offset-xl4">
-                    <%= form.submit("Confirm", class: "link btn green accent-3", style: "width: 100%") %>
+                    <%= form.submit("Confirmar", class: "link btn green accent-3", style: "width: 100%") %>
                 </div>
         <% end %>
       </div>

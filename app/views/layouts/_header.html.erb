@@ -1,19 +1,20 @@
 <div class="navbar-fixed">
     <ul id="user-menu" class="dropdown-content">
-        <li><a href="#!">Account</a></li>
         <li class="divider"></li>
-        <li><%= link_to "Logout", logout_path %></li>
+        <li><%= link_to "SAIR", logout_path %></li>
     </ul>
     <nav class="amber">
         <div class="nav-wrapper container">
             <%= link_to image_tag("logo.png", style: "height: 60px; width: auto"), root_path, class: "brand-logo" %>
             <%= link_to "Coop Form", root_path, class: "brand-logo", style: "margin-left: 70px" %>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "PÁGINA INICIAL", root_path %></li>
                 <% if !logged_in? %>
-                <li><%= link_to "Sign up", signup_path %></li>
-                <li><%= link_to "Login", login_path %></li>
+                <li><%= link_to "CADASTRE-SE", signup_path %></li>
+                <li><%= link_to "LOGIN", login_path %></li>
                 <% else %>
+                <li><%= link_to "ESTATUTO", document_create_path %></li>
+                <li><%= link_to "ATA", formula_create_path %></li>
                 <li><a class="dropdown-trigger" href="#!" data-target="user-menu"><%= current_user.name + " " + current_user.surname[0] + "." %><i class="material-icons right">arrow_drop_down</i></a></li>
                 <% end %>
             </ul>

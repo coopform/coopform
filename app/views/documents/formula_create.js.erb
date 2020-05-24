@@ -1,0 +1,6 @@
+$('#peoplef-div').html("<%= j render 'f_people' %>");
+M.AutoInit();
+<% if !@msg.nil?&&@msg!="" %>
+    var msg = '<p style="color: white">Os dados foram salvos com sucesso!</p>';
+    M.toast({html: msg, classes: 'green accent-3'});
+<% end %>

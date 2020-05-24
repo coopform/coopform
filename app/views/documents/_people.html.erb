@@ -9,6 +9,6 @@
                 <td><%= p.person %></td>
                 <td style="cursor: pointer; padding: 0px" onclick="removePerson('<%= p.person %>')"><%= material_icon.remove %></td>
             </tr>
-        <% end %>
+        <% end if @people %>
     </tbody>
 </table>

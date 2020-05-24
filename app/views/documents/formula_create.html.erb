@@ -1,0 +1,116 @@
+<div id="modal-div"></div>
+<div class="container">
+    <h4 style="text-align: center">Ata da Assembleia Geral de Constituição da Cooperativa</h4>
+    <%= render 'msg' %>
+    <div class="card" style="padding: 30px">
+        <%= form_with(url: formula_create_path("save"), method: 'get') do %>
+            <div class="row">
+                <div class="col s12">
+                    <%= label_tag :ans_1, "Coloque a denominação social e a sigla da cooperativa: ", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_1, @answears[1], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_2_1, "Informe o dia, mês e ano da reunião com o proposto de constituír uma sociedade cooperativa: ", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_2_1, @answears[21], style: "resize: none", placeholder: "1" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_2_2, @answears[22], style: "resize: none", placeholder: "2" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_2_3, @answears[23], style: "resize: none", placeholder: "3" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_3, "Informe a hora da reunião:", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_3, @answears[3], style: "resize: none" %>
+                </div>
+
+                <div class="col s12">
+                    <%= label_tag :ans_4, "Lista os nomes e coloque dados pessoais dos cooperados fundadores: ", style: "margin-top: 30px" %>
+                </div>
+                <div class="col s12" id="peoplef-div">
+                    <%= render 'f_people' %>
+                </div>
+
+
+
+                <div class="col s12">
+                    <%= label_tag :ans_5, "Coloque o nome do coordenador dos trabalhos:", style: "margin-top: 30px" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_5_1, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[51]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_5_2, @answears[52], style: "resize: none", placeholder: "Coloque o nome completo" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_6, "Coloque o nome completo do(-a) Secretário(-a):", style: "margin-top: 30px" %>
+                    <%= text_field_tag :ans_6, @answears[6], style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_7, "Informe a duração do mandato do Conselho de Administração – em anos:", style: "margin-top: 30px" %>
+                    <%= select_tag :ans_7, options_for_select([["1 ano","1 ano"],["2 anos","2 anos"],["3 anos","3 anos"],["4 anos","4 anos"]],[@answears[7]]), style: "resize: none" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_888, "Informe os nomes completos dos cargos do Conselho de Administração: ", style: "margin-top: 30px" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_8, @answears[8], style: "resize: none", placeholder: "Presidente" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_9, @answears[9], style: "resize: none", placeholder: "Diretor Financeiro" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_10, @answears[10], style: "resize: none", placeholder: "Diretor Técnico" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_11, "Coloque os nomes completos dos efetivos do Conselho Fiscal: ", style: "margin-top: 30px" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_11_1_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1110]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_11_1, @answears[111], style: "resize: none", placeholder: "1" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_11_2_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1120]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_11_2, @answears[112], style: "resize: none", placeholder: "2" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_11_3_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1130]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_11_3, @answears[113], style: "resize: none", placeholder: "3" %>
+                </div>
+                <div class="col s12">
+                    <%= label_tag :ans_12, "Coloque os nomes completos dos suplentes do Conselho Fiscal: ", style: "margin-top: 30px" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_12_1_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1210]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_12_1, @answears[121], style: "resize: none", placeholder: "1" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_12_2_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1220]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_12_2, @answears[112], style: "resize: none", placeholder: "2" %>
+                </div>
+                <div class="col s2">
+                    <%= select_tag :ans_12_3_0, options_for_select([["Sr.","Sr."],["Sra.","Sra."]],@answears[1230]), style: "resize: none" %>
+                </div>
+                <div class="col s10">
+                    <%= text_field_tag :ans_12_3, @answears[123], style: "resize: none", placeholder: "3" %>
+                </div>
+                <div class="col s12 m12 l2 xl2">
+                    <%= link_to("Gerar o arquivo", formula_generate_path(:format => 'pdf'), class: "btn amber", style: "width: 100%; margin-top: 15px", target: '_blank') %>
+                </div>
+                <div class="col s12 m12 l2 offset-l8 xl2 offset-xl8">
+                    <%= submit_tag("Salvar o arquivo", class: "btn green accent-3", style: "width: 100%; margin-top: 15px") %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

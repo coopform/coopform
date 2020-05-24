@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to root_url
           else
-            flash.now[:alert] = "Activate your account!"
+            flash.now[:alert] = "Ative a sua conta!"
           end
         else
-          flash.now[:alert] = "Invalid email or password!"
+          flash.now[:alert] = "Email ou senha inválida!"
           render "new"
         end
     end

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   get '/activated/:id', to: 'welcome#activated', as: 'activated'
   get '/activate', to: 'welcome#mail_info', as: 'mail_info'
   get '/documents/generate', to: 'documents#generate', as: 'generate'
+  get '/formula/generate', to: 'documents#formula_generate', as: 'formula_generate'
   get '/documents/categories(/:id)', to: 'documents#category_pick', as: 'category_pick'
   get '/documents/create(/:action_type)', to: 'documents#document_create', as: 'document_create'
+  get '/formula/create(/:action_type)', to: 'documents#formula_create', as: 'formula_create'
+  get '/formula/add/person(/:action_type)', to: 'documents#add_person', as: 'formula_add_person'
+  get '/formula/remove/person/:id', to: 'documents#remove_person', as: 'remove_person'
 end

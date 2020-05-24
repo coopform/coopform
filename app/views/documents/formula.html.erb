@@ -1,0 +1,16 @@
+<h3 style="text-align: center">ATA DA ASSEMBLEIA GERAL DE CONSTITUIÇÃO DA COOPERATIVA <br><%= @answears[1] %> </h3>
+<p>Aos <%= @answears[21] %> dias do mês de <%= @answears[22] %> de <%= @answears[23] %>, ás <%= @answears[3] %>  horas, reuniram-se com o proposto de constituírem uma sociedade cooperativa nos termos da Lei 5.764/71, as seguintes pessoas: </p>
+<% a = 1 %>
+<% @people.each do |p| %>
+    <p><%= a.to_s + ". " %><%= p.f_one.to_s %> <%= p.f_two.to_s %>, brasileiro(-a), <%= p.f_three.to_s %>, <%= p.f_four.to_s %>, com o CPF <%= p.f_five.to_s %> e a identidade <%= p.f_six.to_s %>  residente á rua <%= p.f_seven.to_s %>, que subscreverá 1 (uma) quota-parte.</p>
+    <% a+=1 %>
+<% end %>
+<p>Foi aclamado para coordenar os trabalhos o(a) <%= @answears[51] %> <%= @answears[52] %>, que nomeou a mim, <%= @answears[6] %>, para secretariar os trabalhos e elaborar a presente ata, tendo ainda participado da mesa os senhores <%= @names %>. Após os debates, ficou definido o teor do Estatuto Social da Cooperativa, em anexo a presente ata, que faz parte integrante da mesma, sendo o mesmo aprovado por unanimidade pelo voto dos cooperados fundadores, cujos nomes estão devidamente consignados nesta ata.</p>
+<p>A seguir, foram eleitos, para um mandato de <%= @answears[7] %>, os seguintes componentes dos Conselhos, conforme dispõe o Estatuto recém-aprovado:</p>
+<p>1.  Conselho de Administração: Presidente: <%= @answears[8] %>; Diretor Financeiro: <%= @answears[9] %>; Diretor Técnico <%= @answears[10] %>.</p>
+<p>2.  Conselho Fiscal: Efetivos: <%= @answears[1110] + " " +@answears[111] %>, <%= @answears[1120] + " " +@answears[112] %>, <%= @answears[1130] + " " +@answears[113] %>; Suplentes: <%= @answears[1210] + " " +@answears[121] %>, <%= @answears[1220] + " " +@answears[122] %>, <%= @answears[1230] + " " +@answears[123] %>.</p>
+<p>Todos os eleitos já devidamente qualificados nesta ata. </p>
+<h3 style="text-align: center">DECLARAÇÃO DE DESIMPEDIMENTO: </h3>
+<p>Os cooperados eleitos, sob as penas da lei, declaram que não estão incursos em quaisquer dos crimes previstos em lei ou nas restrições legais que possam impedi-los de exercer atividades mercantis.</p>
+<p>A reunião encerrou-se, sendo por mim, <%= @answears[6] %>, lavrada a ata, sendo lida, conferida e rubricada por todos os presentes. </p>
+

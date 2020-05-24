@@ -12,6 +12,10 @@ $(document).on ("turbolinks:load", function(){
             done: "Confirmar"
         }
     });
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+      });
 });
 
 function addPerson(){

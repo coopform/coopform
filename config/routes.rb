@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get '/formula/create(/:action_type)', to: 'documents#formula_create', as: 'formula_create'
   get '/formula/add/person(/:action_type)', to: 'documents#add_person', as: 'formula_add_person'
   get '/formula/remove/person/:id', to: 'documents#remove_person', as: 'remove_person'
+  get '/inicio', to: 'about#about_word', as: 'about_word'
+  get '/proximos', to: 'about#about_pdf', as: 'about_pdf'
 end

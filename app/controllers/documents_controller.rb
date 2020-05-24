@@ -63,6 +63,23 @@ class DocumentsController < ApplicationController
                     Answear.new(:user_id => current_user.id, :number => 11, :value => params[:ans_11]).save
                     Answear.new(:user_id => current_user.id, :number => 12, :value => params[:ans_12]).save
                 when 2
+                    Answear.where(:user_id => current_user.id).delete_all
+                    Answear.new(:user_id => current_user.id, :number => 1, :value => params[:ans_1]).save
+                    Answear.new(:user_id => current_user.id, :number => 2, :value => params[:ans_2]).save
+                    Answear.new(:user_id => current_user.id, :number => 3, :value => params[:ans_3]).save
+                    Answear.new(:user_id => current_user.id, :number => 4, :value => params[:ans_4]).save
+                    Answear.new(:user_id => current_user.id, :number => 5, :value => params[:ans_5]).save
+                    Answear.new(:user_id => current_user.id, :number => 6, :value => params[:ans_6]).save
+                    Answear.new(:user_id => current_user.id, :number => 31, :value => params[:ans_3_1]).save
+                    Answear.new(:user_id => current_user.id, :number => 7, :value => params[:ans_7]).save
+                    Answear.new(:user_id => current_user.id, :number => 8, :value => params[:ans_8]).save
+                    Answear.new(:user_id => current_user.id, :number => 81, :value => params[:ans_8_1]).save
+                    Answear.new(:user_id => current_user.id, :number => 9, :value => params[:ans_9]).save
+                    Answear.new(:user_id => current_user.id, :number => 91, :value => params[:ans_9_1]).save
+                    Answear.new(:user_id => current_user.id, :number => 10, :value => params[:ans_10]).save
+                    Answear.new(:user_id => current_user.id, :number => 101, :value => params[:ans_10_1]).save
+                    Answear.new(:user_id => current_user.id, :number => 11, :value => params[:ans_11]).save
+                    Answear.new(:user_id => current_user.id, :number => 12, :value => params[:ans_12]).save
                 when 3
             end
             @msg = "Data saved successfully"

@@ -1,25 +1,25 @@
 $('#people-div').html("<%= j render 'people' %>");
 M.AutoInit();
 <% if !@msg.nil?&&@msg!="" %>
-    var msg = '<p style="color: white">Data saved successfully!</p>';
+    var msg = '<p style="color: white">Os dados foram salvos com sucesso!</p>';
     M.toast({html: msg, classes: 'green accent-3'});
 <% end %>
 $('.datepicker').datepicker({
     format: 'dd/mm/yyyy',
     i18n: {
-        months: ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"],
-        monthsShort: ["Sty", "Lut", "Mar", "Kwi", "Maj", "Cze", "Lip", "Sie", "Wrz", "Paź", "Lis", "Gru"],
-        weekdays: ["Poniedziałek","Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"],
-        weekdaysShort: ["Pon","Wt", "Śr", "Czw", "Pt", "Sob", "Nd"],
-        weekdaysAbbrev: ["P","W", "Ś", "C", "P", "S", "N"],
-        cancel: "Wróć",
-        done: "Potwierdź"
+        months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+        monthsShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+        weekdays: ["Segunda","Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+        weekdaysShort: ["Seg","Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"],
+        weekdaysAbbrev: ["S","T", "Q", "Q", "S", "S", "D"],
+        cancel: "Voltar",
+        done: "Confirmar"
     }
 });
 
 function addPerson(){
     if ($("#add-person-input").val()==""){
-        var msg = '<p style="color: white">You need to fill person data!</p>';
+        var msg = '<p style="color: white">Preencha os campos requeridos!</p>';
         M.toast({html: msg, classes: 'red'});
     }else{
         $("#hidden_person").val($("#add-person-input").val());

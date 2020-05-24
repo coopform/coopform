@@ -1,0 +1,3 @@
+class FTeam < ApplicationRecord
+
+end

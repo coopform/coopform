@@ -1,0 +1,13 @@
+$("#modal-div").html("<%= j render 'add_person_modal' %>");
+$("#people-modal").show('fade');
+M.AutoInit();
+
+function submitPerson(){
+    if($("#one").val()==0 || $("#two").val()==0 || $("#three").val()==0 || $("#four").val()==0 || $("#five").val()==0 || $("#six").val()==0 || $("#seven").val()==0){
+        var msg = '<p style="color: white">Preencha os campos requeridos!</p>';
+        M.toast({html: msg, classes: 'red'});
+    }else{
+        $("#people-modal").hide('fade');
+        $("#add-person-form").submit();
+    }
+}

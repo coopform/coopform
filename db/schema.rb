@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200524024735) do
+ActiveRecord::Schema.define(version: 20200524164602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,27 @@ ActiveRecord::Schema.define(version: 20200524024735) do
   create_table "categories", force: :cascade do |t|
     t.string "name", limit: 50
     t.string "description", limit: 400
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_answears", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "number"
+    t.string "value", limit: 1000
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "f_teams", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "f_one", limit: 50
+    t.string "f_two", limit: 50
+    t.string "f_three", limit: 50
+    t.string "f_four", limit: 50
+    t.string "f_five", limit: 50
+    t.string "f_six", limit: 50
+    t.string "f_seven", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

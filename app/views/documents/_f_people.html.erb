@@ -1,0 +1,11 @@
+<%= link_to "Adicionar pessoa", formula_add_person_path, class: "btn amber btn-small", remote: true %>
+<table>
+    <tbody>
+        <% @people.each do |p| %>
+            <tr>
+                <td><%= p.f_one + " " + p.f_two + ", " + p.f_three + ", " + p.f_four + ", " + p.f_five + ", " + p.f_six + ", " + p.f_seven %></td>
+                <td><%= link_to material_icon.remove, remove_person_path(p.id), remote: true %></td>
+            </tr>
+        <% end if @people %>
+    </tbody>
+</table>

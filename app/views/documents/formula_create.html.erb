@@ -11,6 +11,7 @@
                 </div>
                 <div class="col s12">
                     <%= label_tag :ans_2_1, "Informe o dia, mês e ano da reunião com o proposto de constituír uma sociedade cooperativa: ", style: "margin-top: 30px" %>
+<<<<<<< HEAD
                     <%= text_field_tag :ans_2_1, @answears[21], style: "resize: none", placeholder: "Dia" %>
                 </div>
                 <div class="col s12">
@@ -18,6 +19,15 @@
                 </div>
                 <div class="col s12">
                     <%= text_field_tag :ans_2_3, @answears[23], style: "resize: none", placeholder: "Ano" %>
+=======
+                    <%= text_field_tag :ans_2_1, @answears[21], style: "resize: none", placeholder: "1" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_2_2, @answears[22], style: "resize: none", placeholder: "2" %>
+                </div>
+                <div class="col s12">
+                    <%= text_field_tag :ans_2_3, @answears[23], style: "resize: none", placeholder: "3" %>
+>>>>>>> classroom/classroom-branch
                 </div>
                 <div class="col s12">
                     <%= label_tag :ans_3, "Informe a hora da reunião:", style: "margin-top: 30px" %>
@@ -104,10 +114,17 @@
                 <div class="col s10">
                     <%= text_field_tag :ans_12_3, @answears[123], style: "resize: none", placeholder: "3" %>
                 </div>
+<<<<<<< HEAD
                 <div class="col s12 m12 l4 xl4">
                     <%= link_to("Gerar o arquivo", formula_generate_path(:format => 'pdf'), class: "btn amber", style: "width: 100%; margin-top: 15px", target: '_blank') %>
                 </div>
                 <div class="col s12 m12 l4 offset-l4 xl4 offset-xl4">
+=======
+                <div class="col s12 m12 l2 xl2">
+                    <%= link_to("Gerar o arquivo", formula_generate_path(:format => 'pdf'), class: "btn amber", style: "width: 100%; margin-top: 15px", target: '_blank') %>
+                </div>
+                <div class="col s12 m12 l2 offset-l8 xl2 offset-xl8">
+>>>>>>> classroom/classroom-branch
                     <%= submit_tag("Salvar o arquivo", class: "btn green accent-3", style: "width: 100%; margin-top: 15px") %>
                 </div>
             </div>

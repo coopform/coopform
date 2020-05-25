@@ -13,15 +13,10 @@
                 <li><%= link_to "CADASTRE-SE", signup_path %></li>
                 <li><%= link_to "LOGIN", login_path %></li>
                 <% else %>
-<<<<<<< HEAD
                 <li><%= link_to "INÍCIO", about_word_path %></li>
                 <li><%= link_to "ESTATUTO", document_create_path %></li>
                 <li><%= link_to "ATA", formula_create_path %></li>
                 <li><%= link_to "PRÓXIMOS PASSOS", about_pdf_path %></li>
-=======
-                <li><%= link_to "ESTATUTO", document_create_path %></li>
-                <li><%= link_to "ATA", formula_create_path %></li>
->>>>>>> classroom/classroom-branch
                 <li><a class="dropdown-trigger" href="#!" data-target="user-menu"><%= current_user.name + " " + current_user.surname[0] + "." %><i class="material-icons right">arrow_drop_down</i></a></li>
                 <% end %>
             </ul>

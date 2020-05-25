@@ -1,7 +1,5 @@
 <div class="navbar-fixed">
     <ul id="user-menu" class="dropdown-content">
-        <li><%= link_to "ESTATUTO", document_create_path %></li>
-        <li><%= link_to "ATA", formula_create_path %></li>
         <li class="divider"></li>
         <li><%= link_to "SAIR", logout_path %></li>
     </ul>
@@ -11,12 +9,14 @@
             <%= link_to "Coop Form", root_path, class: "brand-logo", style: "margin-left: 70px" %>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><%= link_to "PÁGINA INICIAL", root_path %></li>
-                <li><%= link_to "INÍCIO", about_word_path %></li>
-                <li><%= link_to "PRÓXIMOS PASSOS", about_pdf_path %></li>
                 <% if !logged_in? %>
                 <li><%= link_to "CADASTRE-SE", signup_path %></li>
                 <li><%= link_to "LOGIN", login_path %></li>
                 <% else %>
+                <li><%= link_to "INÍCIO", about_word_path %></li>
+                <li><%= link_to "ESTATUTO", document_create_path %></li>
+                <li><%= link_to "ATA", formula_create_path %></li>
+                <li><%= link_to "PRÓXIMOS PASSOS", about_pdf_path %></li>
                 <li><a class="dropdown-trigger" href="#!" data-target="user-menu"><%= current_user.name + " " + current_user.surname[0] + "." %><i class="material-icons right">arrow_drop_down</i></a></li>
                 <% end %>
             </ul>

@@ -72,10 +72,10 @@
                     <%= label_tag :people, "Insira o nome completo de todos os cooperados:" %>
                     <div id="people-div"><%= render "people" %></div>
                 </div>
-                <div class="col s12 m12 l2 xl2">
+                <div class="col s12 m12 l4 xl4">
                     <%= link_to("Gerar o arquivo", generate_path(:format => 'pdf'), class: "btn amber", style: "width: 100%; margin-top: 15px", target: '_blank') %>
                 </div>
-                <div class="col s12 m12 l2 offset-l8 xl2 offset-xl8">
+                <div class="col s12 m12 l4 offset-l4 xl4 offset-xl4">
                     <%= submit_tag("Salvar o arquivo", class: "btn green accent-3", style: "width: 100%; margin-top: 15px") %>
                 </div>
             </div>
